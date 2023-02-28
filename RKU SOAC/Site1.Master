@@ -1,0 +1,237 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="RKU_SOAC.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>RKU SOAC</title>
+    <%--<meta http-equiv="Refresh" content="5;url=Sports.aspx" />--%>
+
+    <%--bootstrap links--%>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/slicknav.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="owl/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="css/style-main.css" rel="stylesheet" />
+
+    
+
+    <%--js scripts--%>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <%--google fonts--%>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Condensed
+        &family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet" >
+
+   <style>
+       .btnlog{
+           margin-top:-20px;
+           font-family:'Open Sans',sans-serif;
+       }
+       .auto-style1 {
+           left: 200px;
+           top: 0px;
+       }
+   </style>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Offcanvas Menu Section Begin -->
+        <div class="offcanvas-menu-overlay"></div>
+        <div class="offcanvas-menu-wrapper">
+            <div class="canvas-close">
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="search-btn search-switch">
+                <i class="fa fa-search"></i>
+            </div>
+            <ul class="main-menu mobile-menu">
+                <li class="active"><a href="./Home.aspx">Home</a></li>
+                <li><a href="#">Club</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+        <!-- Offcanvas Menu Section End -->
+
+          <!-- Header Section Begin -->
+        <header class="header-section">
+            
+            <div class="header__nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="logo" >
+                                <a href="./Home.aspx"><img src="img/SOAC.png" alt="" width="97" height="58"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            
+                            <div class="nav-menu">
+                                <ul class="main-menu">
+                                    <li  style="top:-20px"><a href="Home.aspx">Home</a></li>
+                                    <li style="top:-20px; font-family:'Open Sans',sans-serif"><a href="Sports.aspx">Sports</a></li>
+                                    <li style="top:-20px; font-family:'Open Sans',sans-serif"><a href="Club.aspx">Club</a></li>
+                                    <li style="top:-20px; font-family:'Open Sans',sans-serif"><a href="Gym.aspx">Gym</a></li>
+                                    <li style="top:-20px; font-family:'Open Sans',sans-serif"><a href="Contactus.aspx">Contact Us</a></li>
+                                    <li  style="top:-20px; font-family:'Open Sans',sans-serif"><asp:LinkButton  ID="Login" runat="server" OnClick="Login_Click">Login</asp:LinkButton></li>
+                                    <li style="top:-20px; font-family:'Open Sans',sans-serif"><asp:LinkButton ID="Signup" runat="server" OnClick="Signup_Click">SignUp</asp:LinkButton></li>
+                                    <li style="top:-20px; font-family:'Open Sans',sans-serif"><asp:LinkButton ID="btnlogout" runat="server" CssClass="auto-style1" Enabled="False" OnClick="btnlogout_Click" Visible="False">Logout</asp:LinkButton></li>
+                                   
+                                </ul>
+                                    
+                                <%--<div class="nm-right search-switch">
+                                    <asp:LinkButton CssClass="btnlog" ID="btnlogout" runat="server">Logout</asp:LinkButton>
+                                </div>--%>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canvas-open">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+       
+        <!-- Header End -->
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+            </asp:ContentPlaceHolder>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+
+    </form>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+
+    <%--owl crousel script code--%>
+    <script src="owl/owl.carousel.min.js"></script>
+    <script>
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+    </script>
+
+    <%--owl crousel script code end--%>
+
+    <%--footer section--%>
+    
+
+    <footer>
+    <asp:Panel  width="1490px" runat="server"  BackColor="#DFDFDF">
+
+        <div style="margin-left:80px">
+       
+        <asp:Table ID="Table1" runat="server" Width="1072px">
+            <asp:TableFooterRow>
+                <asp:TableCell>
+                    <asp:Panel ID="Panel1" runat="server" style="margin-left: 72px" width="161px">
+                        <asp:Label ID="Label1" runat="server" Text="kkidecha652@rku.ac.in"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label2" runat="server" Text="+91 8153058038"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label3" runat="server" Text="RK University, Rajkot"></asp:Label>
+                        <br />
+                 </asp:Panel>
+                </asp:TableCell>
+           
+                <asp:TableCell>
+                    <asp:Panel ID="Panel2" runat="server" style="margin-left: 72px" width="161px">
+                       <asp:Label ID="Label4" runat="server" Text="skadvani653@rku.ac.in"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label5" runat="server" Text="+91 7990432678"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label6" runat="server" Text="RK University, Rajkot"></asp:Label>
+                        <br />
+                    </asp:Panel>
+                </asp:TableCell>
+
+                <asp:TableCell>
+                    <asp:Panel ID="Panel3" runat="server" style="margin-left: 72px" width="161px">
+                        <br /><br />
+                       <asp:Label ID="Label7" runat="server" Text="sports" ForeColor="#E80000"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label8" runat="server" Text="Cricket"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label9" runat="server" Text="Football"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label13" runat="server" Text="Bedminton"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label14" runat="server" Text="Table Tennis"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label15" runat="server" Text="vollyBall"></asp:Label>
+                        <br /><br />
+                    </asp:Panel>
+                </asp:TableCell>
+
+                <asp:TableCell>
+                    <asp:Panel ID="Panel4" runat="server" style="margin-left: 72px" width="161px">
+                       <asp:Label ID="Label10" runat="server" Text="Clubs" ForeColor="#E80000"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label11" runat="server" Text="Foot Ball"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label12" runat="server" Text="TableTennis"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label16" runat="server" Text="vollyBall"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label17" runat="server" Text="BasketBall"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label18" runat="server" Text="Music"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label19" runat="server" Text="">Badminton</asp:Label>
+                        <br />
+                        <asp:Label ID="Label20" runat="server" Text="Dance"></asp:Label>
+                    </asp:Panel>
+                </asp:TableCell>
+
+            </asp:TableFooterRow>
+        </asp:Table>
+        </div>
+    </asp:Panel>
+    </footer>
+
+    
+</body>
+</html>
