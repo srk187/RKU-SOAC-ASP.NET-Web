@@ -36,6 +36,9 @@
            left: 200px;
            top: 0px;
        }
+       .imgbutton{
+           top : -15px
+       }
    </style>
 
 
@@ -87,13 +90,14 @@
                                     <li style="top:-20px; font-family:'Open Sans',sans-serif"><a href="Contactus.aspx">Contact Us</a></li>
                                     <li  style="top:-20px; font-family:'Open Sans',sans-serif"><asp:LinkButton  ID="Login" runat="server" OnClick="Login_Click">Login</asp:LinkButton></li>
                                     <li style="top:-20px; font-family:'Open Sans',sans-serif"><asp:LinkButton ID="Signup" runat="server" OnClick="Signup_Click">SignUp</asp:LinkButton></li>
-                                    <li style="top:-20px; font-family:'Open Sans',sans-serif"><asp:LinkButton ID="btnlogout" runat="server" CssClass="auto-style1" Enabled="False" OnClick="btnlogout_Click" Visible="False">Logout</asp:LinkButton></li>
+                                    <%--<li style="top:-20px; font-family:'Open Sans',sans-serif"><asp:LinkButton ID="btnlogout" runat="server" CssClass="auto-style1" Enabled="False" OnClick="btnlogout_Click" Visible="False">Logout</asp:LinkButton></li>--%>
+                                    <asp:ImageButton ID="ImageButton1" runat="server" CssClass="imgbutton" ImageUrl="~/img/account.png"  Width="40px" Height="40px" Visible="False" Enabled="False" OnClick="ImageButton1_Click" />
+                                    
+
+
                                    
                                 </ul>
                                     
-                                <%--<div class="nm-right search-switch">
-                                    <asp:LinkButton CssClass="btnlog" ID="btnlogout" runat="server">Logout</asp:LinkButton>
-                                </div>--%>
                             </div>
                         </div>
                     </div>
@@ -151,15 +155,16 @@
                     }
                 }
             });
-        });
+
     </script>
+    
 
     <%--owl crousel script code end--%>
 
     <%--footer section--%>
     
 
-    <footer>
+    <footer>               
     <asp:Panel  width="1490px" runat="server"  BackColor="#DFDFDF">
 
         <div style="margin-left:80px">

@@ -30,8 +30,8 @@ namespace RKU_SOAC
             SqlConnection conn = new SqlConnection(cs);
             conn.Open();
 
-            string query = "insert into Student(Enrollment_id,Student_name,Student_email,Student_contact,Student_department)" +
-                " values (@enrollment,@name,@email,@contact,@department )";
+            string query = "insert into Student(Enrollment_id,Student_name,Student_email,Student_contact,Student_department,Student_password)" +
+                " values (@enrollment,@name,@email,@contact,@department,@password )";
             SqlCommand cmd = new SqlCommand(query, conn);
 
             cmd.Parameters.AddWithValue("@enrollment", txtregisterenroll.Text);
@@ -39,6 +39,8 @@ namespace RKU_SOAC
             cmd.Parameters.AddWithValue("@email", txtregisteremail.Text);
             cmd.Parameters.AddWithValue("@contact", txtregistercontact.Text);
             cmd.Parameters.AddWithValue("@department", txtregisterdept.Text);
+            cmd.Parameters.AddWithValue("@password", txtregisterpass.Text.ToString());
+
 
             cmd.ExecuteNonQuery();
             conn.Close();

@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AccountDetail.aspx" />
     <Content Include="Club.aspx" />
     <Content Include="clubregistration.aspx" />
     <Content Include="Contactus.aspx" />
@@ -221,6 +222,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDetail.aspx.cs">
+      <DependentUpon>AccountDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountDetail.aspx.designer.cs">
+      <DependentUpon>AccountDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Club.aspx.cs">
       <DependentUpon>Club.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

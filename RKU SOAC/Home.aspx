@@ -41,7 +41,6 @@
                 </div>
                 <div class="item">
                     <img src="img/hero/NAAC_2.png" alt="png"/>
-                /
                 </div>
                 <div class="item">
                     <img src="img/hero/aria-slider.png" alt="png"/>

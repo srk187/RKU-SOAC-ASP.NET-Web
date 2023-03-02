@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using System.Windows;
 
 namespace RKU_SOAC
 {
@@ -23,6 +24,7 @@ namespace RKU_SOAC
             }
             else
             {
+                
                 Response.Redirect("Sports.aspx", true);
             }
             
@@ -49,6 +51,7 @@ namespace RKU_SOAC
             cmd.ExecuteNonQuery();
             conn.Close();
             lbldone.Visible = true;
+            Response.Write("<script type='text/javascript'>alert('Registered successfull')</script>");
             Response.Redirect("Home.aspx", true); 
         }
     }

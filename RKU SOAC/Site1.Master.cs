@@ -17,8 +17,10 @@ namespace RKU_SOAC
                 Login.Enabled=false;
                 Signup.Visible= false;
                 Signup.Enabled=false;
-                btnlogout.Visible=true;
-                btnlogout.Enabled=true;
+                //btnlogout.Visible=true;
+                //btnlogout.Enabled=true;
+                ImageButton1.Enabled=true;
+                ImageButton1.Visible=true;
             }
         }
 
@@ -41,6 +43,13 @@ namespace RKU_SOAC
             Session.Abandon();
 
             Response.Redirect("Home.aspx", true);
+        }
+
+        
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("AccountDetail.aspx", true);
         }
     }
 }
